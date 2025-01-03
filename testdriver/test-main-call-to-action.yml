@@ -1,0 +1,12 @@
+version: 4.1.32
+steps:
+  - prompt: Focus the browser window.
+    commands: []
+  - prompt: >-
+      Click on the main call to action button  # Use the content of the file
+      from the environment
+    commands:
+      - command: hover-text
+        text: Build yours
+        description: main call to action button
+        action: click
