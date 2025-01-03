@@ -1,0 +1,22 @@
+version: 4.1.32
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: >-
+      Click on each navigation link  # Use the content of the file from the
+      environment
+    commands:
+      - command: hover-text
+        text: In Home Trt
+        description: first navigation link
+        action: click
+      - command: hover-text
+        text: Visit Website
+        description: button for the first search result
+        action: click
+      - command: hover-text
+        text: Tv Show Discovery Plus
+        description: third navigation link
+        action: click
