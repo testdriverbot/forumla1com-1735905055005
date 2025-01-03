@@ -1,0 +1,16 @@
+version: 4.1.32
+steps:
+  - prompt: Focus the browser window.
+    commands: []
+  - prompt: Click on the "Accept" button for cookies.
+    commands:
+      - command: hover-text
+        text: Accept
+        description: cookie consent button at the bottom right
+        action: click
+  - prompt: >-
+      Assert that the cookie consent banner disappears successfully.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: the cookie consent banner is not visible
